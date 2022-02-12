@@ -13,6 +13,8 @@ function linux_distro_installation()
     arch)
       installation_package="pacman -S --noconfirm"
       ;;
+    alpine)
+      installation_package="apk add"
   esac
   echo ${installation_package}
 }
@@ -49,3 +51,9 @@ fi
   # Configuring zshrc
   sed -iE 's:^ZSH_THEME=.*$:ZSH_THEME=powerlevel10k/powerlevel10k:g' ${HOME}/.zshrc
   sed -iE 's:^plugins=.*$:plugins=(git fzf zsh-syntax-highlighting kubectl z):g' ${HOME}/.zshrc
+
+echo '
+# Some Keys configuration
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+bindkey  "^[[3~"  delete-char' >> ${HOME}/.zshrc
