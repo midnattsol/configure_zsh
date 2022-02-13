@@ -11,7 +11,7 @@ chsh -s /bin/zsh
 ```
 To use this script you only have to clone the repository and execute the  **configure_zsh.sh** script. But if you don't want to clone it you also can use the command below:
 ```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/midnattsol/configure_zsh/master/configure_zsh.sh)"
+zsh -c "$(curl -fsSL https://raw.githubusercontent.com/midnattsol/configure_zsh/master/configure_zsh.sh)"
 ```
 Once the script has ended charge the new configuration
 ```sh
